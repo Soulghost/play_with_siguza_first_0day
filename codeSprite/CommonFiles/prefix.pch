@@ -1,0 +1,58 @@
+
+//
+//  prefix.pch
+//  codeSprite
+//
+//  Created by soulghost on 25/4/2016.
+//  Copyright © 2016 soulghost. All rights reserved.
+//
+
+#ifndef prefix_pch
+#define prefix_pch
+
+#ifdef __OBJC__
+
+/** Libs */
+#import "MJRefresh.h"
+/** Category */
+#import "UITextView+SGExtension.h"
+#import "MBProgressHUD+SGExtension.h"
+/** Global */
+#import "SGGlobalSettings.h"
+/** Utils */
+#import "SGFileUtil.h"
+/** Index System */
+#import "SGIndexManager.h"
+#import "SGClassIndex.h"
+#import "SGFileIndex.h"
+#import "SGMethodIndex.h"
+#import "SGIndexStorage.h"
+/** UI */
+#import "SGUIKit.h"
+#import "MBProgressHUD.h"
+#import "SGMultiPopViewController.h"
+/** Controller */
+#import "SGFileNavigationController.h"
+/** Notification */
+#define SGFileIndexFinishNotification @"SGFileIndexFinishNotification"
+#define SGCodeViewShouldJumpNotification @"SGCodeViewShouldJumpNotification"
+#define SGFileUploadDidStartNotification @"SGFileUploadDidStartNotification"
+#define SGFileUploadDidEndNotification @"SGFileUploadDidEndNotification"
+#define SGFileUploadProgressNotification @"SGFileUploadProgressNotification"
+
+
+#define regex_barrier(block) \
+    dispatch_barrier_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block); \
+
+#define TopViewController [[UIApplication sharedApplication].windows lastObject].rootViewController
+#define DocumentDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+#define CachesDirectory [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+#define VendorID [UIDevice currentDevice].identifierForVendor
+#define UIBarSpring [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]
+#define VisibleSize [UIScreen mainScreen].bounds.size
+#define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#endif
+
+#endif
