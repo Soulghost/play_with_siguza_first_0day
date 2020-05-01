@@ -1,6 +1,10 @@
 # play_with_siguza_first_0day
 a toy to play with siguza's very first 0 day - sandbox escape
 
+# Preview
+![](https://github.com/Soulghost/play_with_siguza_first_0day/blob/master/resources/dir.PNG)
+![](https://github.com/Soulghost/play_with_siguza_first_0day/blob/master/resources/file.PNG)
+
 # Usage
 1. just Build & Run
 
