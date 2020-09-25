@@ -39,6 +39,7 @@
         self.path = path;
         NSArray<NSString*> *pathComps = [self.path componentsSeparatedByString:@"/"];
         self.title = pathComps[pathComps.count - 1];
+        self.edgesForExtendedLayout = UIRectEdgeBottom;
     }
     return self;
 }
